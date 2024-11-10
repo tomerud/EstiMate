@@ -1,4 +1,9 @@
+from dotenv import load_dotenv
 import mysql.connector
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Sample data to insert
 cities_data = [
@@ -19,18 +24,18 @@ cities_data = [
     ("Recife", "Brazil", "South America", "Portuguese", "Christianity", 0.754, -8.0476, -34.8770),
     ("Guayaquil", "Ecuador", "South America", "Spanish", "Christianity", 0.759, -2.1708, -79.9224),
     ("Maracaibo", "Venezuela", "South America", "Spanish", "Christianity", 0.711, 10.6666, -71.6125),
-    ("Arequipa", "Peru", "South America", "Spanish", "Christianity", 0.759, -16.4090, -71.5375),
+    ("Eilat", "Israel", "Asia", "Hebrew", "Judaism", 0.919, 29.5577, 34.9519),
     ("Punta Arenas", "Chile", "South America", "Spanish", "Christianity", 0.851, -53.1638, -70.9171),
     ("Antofagasta", "Chile", "South America", "Spanish", "Christianity", 0.851, -23.6509, -70.3975)
 ]
 
-# Connect to MySQL database
+# Connect to MySQL database using environment variables
 conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="112145",
-    port=3306,
-    database="cities"
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    port=int(os.getenv("DB_PORT", 3306)),  # Use 3306 as the default if DB_PORT is not set
+    database=os.getenv("DB_NAME")
 )
 
 # Create a cursor object

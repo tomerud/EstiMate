@@ -1,0 +1,155 @@
+city,country,human_development_index,religion,language,latitude,longitude
+Abu Dhabi,UAE,0.89,Islam,Arabic,24.453900,54.377300
+Accra,Ghana,0.611,Christianity,English,5.603700,-0.187000
+Almaty,Kazakhstan,0.8,Islam,Kazakh/Russian,43.222000,76.851200
+Amman,Jordan,0.72,Islam,Arabic,31.945400,35.928400
+Amsterdam,Netherlands,0.944,Christianity,Dutch,52.367600,4.904100
+Antofagasta,Chile,0.851,Christianity,Spanish,-23.650900,-70.397500
+Antwerp,Belgium,0.931,Christianity,Dutch,51.219400,4.402500
+Arequipa,Peru,0.759,Christianity,Spanish,-16.409000,-71.537500
+Asmara,Eritrea,0.459,Christianity/Islam,Tigrinya,15.322900,38.925100
+Asunción,Paraguay,0.728,Christianity,Spanish,-25.263700,-57.575900
+Athens,Greece,0.888,Christianity,Greek,37.983800,23.727500
+Auckland,New Zealand,0.931,Christianity,English/Maori,-36.848500,174.763300
+Baku,Azerbaijan,0.756,Islam,Azerbaijani,40.409300,49.867100
+Bangalore,India,0.645,Hinduism,Kannada,12.971600,77.594600
+Bangkok,Thailand,0.765,Buddhism,Thai,13.756300,100.501800
+Barcelona,Spain,0.904,Christianity,Spanish,41.385100,2.173400
+Basel,Switzerland,0.955,Christianity,German,47.559600,7.588600
+Beijing,China,0.752,Buddhism,Mandarin,39.904200,116.407400
+Beirut,Lebanon,0.73,Christianity/Islam,Arabic/French,33.893800,35.501800
+Belgrade,Serbia,0.806,Christianity,Serbian,44.786600,20.448900
+Bergen,Norway,0.957,Christianity,Norwegian,60.391300,5.322100
+Berlin,Germany,0.947,Christianity,German,52.520000,13.405000
+Bogotá,Colombia,0.767,Christianity,Spanish,4.711000,-74.072100
+Bologna,Italy,0.895,Christianity,Italian,44.494900,11.342600
+Brasilia,Brazil,0.754,Christianity,Portuguese,-15.794200,-47.882200
+Bratislava,Slovakia,0.86,Christianity,Slovak,48.148600,17.107700
+Brussels,Belgium,0.931,Christianity,French/Dutch,50.850300,4.351700
+Budapest,Hungary,0.854,Christianity,Hungarian,47.497900,19.040200
+Buenos Aires,Argentina,0.845,Christianity,Spanish,-34.603700,-58.381600
+Cairo,Egypt,0.707,Islam,Arabic,30.044400,31.235700
+Cape Town,South Africa,0.709,Christianity,English/Afrikaans,-33.924900,18.424100
+Cartagena,Colombia,0.767,Christianity,Spanish,10.391000,-75.479400
+Casablanca,Morocco,0.686,Islam,Arabic,33.573100,-7.589800
+Chengdu,China,0.752,Buddhism,Mandarin,30.572800,104.066800
+Chennai,India,0.645,Hinduism,Tamil,13.082700,80.270700
+Chiang Mai,Thailand,0.765,Buddhism,Thai,18.788300,98.985300
+Chicago,USA,0.926,Christianity,English,41.878100,-87.629800
+Córdoba,Spain,0.904,Christianity,Spanish,37.888200,-4.779400
+Cusco,Peru,0.759,Christianity,Spanish,-13.531900,-71.967500
+Dakar,Senegal,0.511,Islam,French,14.716700,-17.467700
+Delhi,India,0.645,Hinduism,Hindi,28.704100,77.102500
+Doha,Qatar,0.848,Islam,Arabic,25.276987,51.521008
+Dubai,UAE,0.89,Islam,Arabic,25.276987,55.296249
+Dublin,Ireland,0.955,Christianity,English,53.349800,-6.260300
+Edinburgh,UK,0.936,Christianity,English,55.953300,-3.188300
+Fes,Morocco,0.686,Islam,Arabic,34.033100,-4.999800
+Florence,Italy,0.895,Christianity,Italian,43.769600,11.255800
+Fortaleza,Brazil,0.754,Christianity,Portuguese,-3.717200,-38.543400
+Geneva,Switzerland,0.955,Christianity,French,46.204400,6.143200
+Ghent,Belgium,0.931,Christianity,Dutch/French,51.054300,3.717400
+Giza,Egypt,0.707,Islam,Arabic,30.013100,31.208900
+Guangzhou,China,0.752,Buddhism,Mandarin/Cantonese,23.129100,113.264400
+Guayaquil,Ecuador,0.759,Christianity,Spanish,-2.170800,-79.922400
+Haifa,Israel,0.919,Judaism,Hebrew,32.794000,34.989600
+Hamburg,Germany,0.947,Christianity,German,53.551100,9.993700
+Hanoi,Vietnam,0.694,Buddhism,Vietnamese,21.028500,105.854200
+Havana,Cuba,0.783,Christianity,Spanish,23.113600,-82.366600
+Helsinki,Finland,0.94,Christianity,Finnish,60.169900,24.938400
+Hiroshima,Japan,0.915,Shinto/Buddhism,Japanese,34.385300,132.455300
+Ho Chi Minh City,Vietnam,0.694,Buddhism,Vietnamese,10.823100,106.629700
+Hobart,Australia,0.944,Christianity,English,-42.882100,147.327200
+Hong Kong,China,0.939,Buddhism,Cantonese,22.319300,114.169400
+Innsbruck,Austria,0.914,Christianity,German,47.269200,11.404100
+Islamabad,Pakistan,0.57,Islam,Urdu,33.684400,73.047900
+Istanbul,Turkey,0.82,Islam,Turkish,41.008200,28.978400
+Jaipur,India,0.645,Hinduism,Hindi,26.912400,75.787300
+Jakarta,Indonesia,0.718,Islam,Indonesian,-6.208800,106.845600
+Jerusalem,Israel,0.906,Judaism/Islam/Christianity,Hebrew/Arabic,31.768300,35.213700
+Johannesburg,South Africa,0.709,Christianity,English,-26.204100,28.047300
+Kathmandu,Nepal,0.602,Hinduism/Buddhism,Nepali,27.717200,85.324000
+Kigali,Rwanda,0.543,Christianity,Kinyarwanda,-1.957900,30.112700
+Kraków,Poland,0.872,Christianity,Polish,50.064700,19.945000
+Kuala Lumpur,Malaysia,0.804,Islam,Malay,3.139000,101.686900
+Kyoto,Japan,0.915,Shinto/Buddhism,Japanese,35.011600,135.768100
+La Paz,Bolivia,0.718,Christianity,Spanish,-16.489700,-68.119300
+Lagos,Nigeria,0.539,Christianity/Islam,English,6.524400,3.379200
+Las Vegas,USA,0.926,Christianity,English,36.169900,-115.139800
+Libreville,Gabon,0.703,Christianity,French,0.416200,9.467300
+Lima,Peru,0.759,Christianity,Spanish,-12.046400,-77.042800
+Lisbon,Portugal,0.864,Christianity,Portuguese,38.716900,-9.139900
+Ljubljana,Slovenia,0.917,Christianity,Slovenian,46.056900,14.505800
+London,UK,0.932,Christianity,English,51.507400,-0.127800
+Los Angeles,USA,0.926,Christianity,English,34.052200,-118.243700
+Luanda,Angola,0.581,Christianity,Portuguese,-8.839000,13.289400
+Lucerne,Switzerland,0.955,Christianity,German,47.050200,8.309300
+Luxembourg City,Luxembourg,0.916,Christianity,Luxembourgish/French/German,49.611600,6.131900
+Lyon,France,0.901,Christianity,French,45.764000,4.835700
+Madrid,Spain,0.904,Christianity,Spanish,40.416800,-3.703800
+Malaga,Spain,0.904,Christianity,Spanish,36.721300,-4.421400
+Manama,Bahrain,0.875,Islam,Arabic,26.223500,50.587600
+Manila,Philippines,0.718,Christianity,Filipino/English,14.599500,120.984200
+Maputo,Mozambique,0.456,Christianity,Portuguese,-25.969200,32.573200
+Maracaibo,Venezuela,0.711,Christianity,Spanish,10.666600,-71.612500
+Marrakech,Morocco,0.686,Islam,Arabic,31.629500,-7.981100
+Marseille,France,0.901,Christianity,French,43.296500,5.369800
+Medina,Saudi Arabia,0.854,Islam,Arabic,24.524700,39.569200
+Mendoza,Argentina,0.845,Christianity,Spanish,-32.889500,-68.845800
+Mexico City,Mexico,0.779,Christianity,Spanish,19.432600,-99.133200
+Miami,USA,0.926,Christianity,English,25.761700,-80.191800
+Milan,Italy,0.895,Christianity,Italian,45.464200,9.190000
+Montevideo,Uruguay,0.817,Christianity,Spanish,-34.901100,-56.164500
+Montreal,Canada,0.929,Christianity,French/English,45.501700,-73.567300
+Moscow,Russia,0.816,Christianity,Russian,55.755800,37.617300
+Munich,Germany,0.947,Christianity,German,48.135100,11.582000
+Muscat,Oman,0.821,Islam,Arabic,23.588000,58.382900
+Nairobi,Kenya,0.601,Christianity,Swahili/English,-1.292100,36.821900
+Naples,Italy,0.895,Christianity,Italian,40.851800,14.268100
+New York,USA,0.926,Christianity,English,40.712800,-74.006000
+Nice,France,0.901,Christianity,French,43.710200,7.262000
+Panama City,Panama,0.815,Christianity,Spanish,8.982400,-79.519900
+Paris,France,0.901,Christianity,French,48.856600,2.352200
+Pattaya,Thailand,0.765,Buddhism,Thai,12.927600,100.877100
+Phnom Penh,Cambodia,0.594,Buddhism,Khmer,11.556400,104.928200
+Phuket,Thailand,0.765,Buddhism,Thai,7.880400,98.392300
+Port Louis,Mauritius,0.802,Hinduism/Christianity,English/French,-20.160900,57.501200
+Porto,Portugal,0.864,Christianity,Portuguese,41.157900,-8.629100
+Porto Alegre,Brazil,0.754,Christianity,Portuguese,-30.034600,-51.217700
+Prague,Czech Republic,0.9,Christianity,Czech,50.075500,14.437800
+Punta Arenas,Chile,0.851,Christianity,Spanish,-53.163800,-70.917100
+Quebec City,Canada,0.929,Christianity,French,46.813900,-71.208200
+Quito,Ecuador,0.759,Christianity,Spanish,-0.180700,-78.467800
+Recife,Brazil,0.754,Christianity,Portuguese,-8.047600,-34.877000
+Reykjavik,Iceland,0.949,Christianity,Icelandic,64.135500,-21.895400
+Rio de Janeiro,Brazil,0.754,Christianity,Portuguese,-22.906800,-43.172900
+Rome,Italy,0.895,Christianity,Italian,41.902800,12.496400
+Salvador,Brazil,0.754,Christianity,Portuguese,-12.971400,-38.501400
+San Francisco,USA,0.926,Christianity,English,37.774900,-122.419400
+San José,Costa Rica,0.794,Christianity,Spanish,9.928100,-84.090700
+Santiago,Chile,0.851,Christianity,Spanish,-33.448900,-70.669300
+Seoul,South Korea,0.916,Buddhism/Christianity,Korean,37.566500,126.978000
+Seville,Spain,0.904,Christianity,Spanish,37.388600,-5.982300
+Shanghai,China,0.752,Buddhism,Mandarin,31.230400,121.473700
+Singapore,Singapore,0.935,Buddhism,English/Malay,1.352100,103.819800
+Split,Croatia,0.858,Christianity,Croatian,43.508100,16.440200
+Stockholm,Sweden,0.945,Christianity,Swedish,59.329300,18.068600
+Suzhou,China,0.752,Buddhism,Mandarin,31.298300,120.583200
+Sydney,Australia,0.944,Christianity,English,-33.868800,151.209300
+Tbilisi,Georgia,0.786,Christianity,Georgian,41.715100,44.827100
+Tel Aviv,Israel,0.919,Judaism,Hebrew,32.085300,34.781800
+Thimphu,Bhutan,0.654,Buddhism,Dzongkha,27.472800,89.639000
+Tokyo,Japan,0.915,Shinto/Buddhism,Japanese,35.689500,139.691700
+Toronto,Canada,0.929,Christianity,English/French,43.651000,-79.347000
+Tunis,Tunisia,0.74,Islam,Arabic,36.806500,10.181500
+Ulaanbaatar,Mongolia,0.737,Buddhism,Mongolian,47.886400,106.905700
+Valparaíso,Chile,0.851,Christianity,Spanish,-33.047200,-71.612700
+Vancouver,Canada,0.929,Christianity,English,49.282700,-123.120700
+Venice,Italy,0.895,Christianity,Italian,45.440800,12.315500
+Victoria,Seychelles,0.796,Christianity,English/French,-4.619100,55.451300
+Victoria Falls,Zimbabwe,0.571,Christianity,English,-17.924300,25.856700
+Vienna,Austria,0.914,Christianity,German,48.208200,16.373800
+Warsaw,Poland,0.872,Christianity,Polish,52.229700,21.012200
+Yogyakarta,Indonesia,0.718,Islam,Indonesian,-7.795600,110.369500
+Zanzibar City,Tanzania,0.528,Islam,Swahili,-6.165900,39.202600
+Zurich,Switzerland,0.955,Christianity,German,47.376900,8.541700

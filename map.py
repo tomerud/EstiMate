@@ -2,8 +2,7 @@ import mysql.connector
 import pandas as pd
 import plotly.express as px
 
-
-def fetch_city_data():
+def fetch_all_locations():
     # Connect to the MySQL database
     conn = mysql.connector.connect(
         host="localhost",
@@ -14,44 +13,41 @@ def fetch_city_data():
     )
     cursor = conn.cursor(dictionary=True)
 
-    # Fetch city data
-    cursor.execute("SELECT City, `Location`, `Development Ranking (HDI)`, Religion, Language FROM cities LIMIT 51")
-    cities = cursor.fetchall()
+    # Fetch city data with adjusted column names
+    cursor.execute("SELECT city, country, human_development_index, religion, language, latitude, longitude FROM top_touristic_cities")
+    locations = cursor.fetchall()
 
     # Close the database connection
     cursor.close()
     conn.close()
 
     # Check if we have data
-    if not cities:
-        print("No city data found.")
+    if not locations:
+        print("No location data found.")
         return None
 
     # Convert to a DataFrame for easy manipulation
-    cities_df = pd.DataFrame(cities)
+    locations_df = pd.DataFrame(locations)
 
-    # Split 'Location' column into 'Latitude' and 'Longitude'
-    cities_df[['Latitude', 'Longitude']] = cities_df['Location'].str.split(',', expand=True).astype(float)
-    cities_df.drop(columns=['Location'], inplace=True)
-
-    return cities_df
+    return locations_df
 
 
-def create_minimalistic_map(cities_df):
+def create_informative_map(locations_df):
     # Create an interactive scatter plot map with Plotly
     fig = px.scatter_geo(
-        cities_df,
-        lat='Latitude',
-        lon='Longitude',
-        hover_name='City',
+        locations_df,
+        lat='latitude',
+        lon='longitude',
+        hover_name='city',
         hover_data={
-            "Development Ranking (HDI)": True,
-            "Religion": True,
-            "Language": True,
-            "Latitude": False,  # Hide in hover data
-            "Longitude": False  # Hide in hover data
+            "country": True,  # Add country to the hover data
+            "human_development_index": True,
+            "religion": True,
+            "language": True,
+            "latitude": False,  # Hide in hover data
+            "longitude": False  # Hide in hover data
         },
-        title="Minimalistic World Map of Cities"
+        title="Interactive Map of All Touristic Locations by City",
     )
 
     # Customize marker size, color, and opacity
@@ -72,7 +68,7 @@ def create_minimalistic_map(cities_df):
 
     # Update layout for a minimalistic look
     fig.update_layout(
-        title="Minimalistic World Map of Cities",
+        title="Interactive Map of All Touristic Locations by City",
         font=dict(size=12),
         margin={"r": 0, "t": 30, "l": 0, "b": 0},
         showlegend=False
@@ -83,12 +79,12 @@ def create_minimalistic_map(cities_df):
 
 
 def main():
-    # Fetch the city data from the database
-    cities_df = fetch_city_data()
+    # Fetch all location data from the database
+    locations_df = fetch_all_locations()
 
-    if cities_df is not None:
-        # Create and display the minimalistic map
-        create_minimalistic_map(cities_df)
+    if locations_df is not None:
+        # Create and display the informative map
+        create_informative_map(locations_df)
 
 
 if __name__ == "__main__":

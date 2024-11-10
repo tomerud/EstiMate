@@ -13,59 +13,64 @@ def get_most_similar_city():
     )
     cursor = conn.cursor(dictionary=True)
 
-    # Fetch a list of 50 cities
-    cursor.execute("SELECT * FROM cities LIMIT 51")
+    # Fetch all cities from the table
+    cursor.execute("SELECT * FROM top_touristic_cities")
     cities = cursor.fetchall()
 
     if not cities:
         print("No cities found in the database.")
-        return
+        return None
 
     # Display the city list for user selection
     print("Choose a city from the following list:")
     for i, city in enumerate(cities):
-        print(f"{i + 1}. {city['City']}")  # Using the exact column name 'City'
+        print(f"{i + 1}. {city['city']}")  # Using the exact column name 'city'
 
     # Get user input
-    chosen_index = int(input("Enter the number corresponding to your chosen city: ")) - 1
-    if chosen_index < 0 or chosen_index >= len(cities):
-        print("Invalid choice. Please try again.")
+    try:
+        chosen_index = int(input("Enter the number corresponding to your chosen city: ")) - 1
+        if chosen_index < 0 or chosen_index >= len(cities):
+            print("Invalid choice. Please try again.")
+            return None
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
         return None
 
     # Get the chosen city data
     input_city_data = cities[chosen_index]
-    print(f"Chosen city: {input_city_data['City']}")  # Using the exact column name 'City'
+    print(f"Chosen city: {input_city_data['city']}")
 
     # Initialize variables for finding the most similar city
     most_similar_city = None
-    smallest_distance = float('inf')
+    smallest_similarity_score = float('inf')
 
-    # Compare the chosen city with the other 49 cities
+    # Compare the chosen city with each other city
     for city in cities:
-        if city["City"] == input_city_data["City"]:  # Using 'City' to check for the chosen city
-            continue  # Skip the chosen city itself
+        if city["city"] == input_city_data["city"]:  # Skip the chosen city itself
+            continue
 
-        # Parse latitude and longitude from the Location string format
-        loc1 = tuple(map(float, input_city_data["Location"].split(',')))
-        loc2 = tuple(map(float, city["Location"].split(',')))
+        # Get the coordinates for distance calculation
+        loc1 = (input_city_data["latitude"], input_city_data["longitude"])
+        loc2 = (city["latitude"], city["longitude"])
 
-        # Calculate similarity based on location
+        # Calculate geographic distance
         location_distance = geodesic(loc1, loc2).kilometers
 
-        # Calculate similarity on HDI, religion, and language
-        hdi_difference = abs(input_city_data["Development Ranking (HDI)"] - city[
-            "Development Ranking (HDI)"])  # Using the exact column name
-        religion_similarity = int(input_city_data["Religion"] == city["Religion"])
-        language_similarity = int(input_city_data["Language"] == city["Language"])
+        # Calculate HDI difference
+        hdi_difference = abs(input_city_data["human_development_index"] - city["human_development_index"])
+
+        # Check for religion and language similarity
+        religion_similarity = int(input_city_data["religion"] == city["religion"])
+        language_similarity = int(input_city_data["language"] == city["language"])
 
         # Compute a weighted similarity score
-        total_similarity = location_distance * 0.3 + hdi_difference * 0.4
-        total_similarity -= religion_similarity * 0.15
-        total_similarity -= language_similarity * 0.15
+        similarity_score = location_distance * 0.3 + hdi_difference * 0.4
+        similarity_score -= religion_similarity * 0.15
+        similarity_score -= language_similarity * 0.15
 
         # Track the most similar city
-        if total_similarity < smallest_distance:
-            smallest_distance = total_similarity
+        if similarity_score < smallest_similarity_score:
+            smallest_similarity_score = similarity_score
             most_similar_city = city
 
     # Close cursor and connection
@@ -74,7 +79,10 @@ def get_most_similar_city():
 
     # Return the most similar city
     if most_similar_city:
-        print(f"The most similar city to {input_city_data['City']} is {most_similar_city['City']}.")  # Using 'City'
+        print(f"The most similar city to {input_city_data['city']} is {most_similar_city['city']}.")
+    else:
+        print("Could not find a similar city.")
+
     return most_similar_city
 
 

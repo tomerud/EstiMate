@@ -1,0 +1,1 @@
+SELECT * FROM cities.top_touristic_cities;

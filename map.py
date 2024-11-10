@@ -1,15 +1,20 @@
+from dotenv import load_dotenv
 import mysql.connector
 import pandas as pd
 import plotly.express as px
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 def fetch_all_locations():
-    # Connect to the MySQL database
+    # Connect to the MySQL database using environment variables
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="112145",
-        port=3306,
-        database="cities"
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        port=int(os.getenv("DB_PORT", 3306)),  # Use default port if not set
+        database=os.getenv("DB_NAME")
     )
     cursor = conn.cursor(dictionary=True)
 
